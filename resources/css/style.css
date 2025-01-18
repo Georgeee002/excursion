@@ -5,6 +5,9 @@ body {
     background-color: black;
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header Section */
@@ -13,53 +16,81 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 3rem; /* Adjust font size to match screenshot */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    color: white; /* Ensure the text color is white */
+    margin: 0; /* Remove any default margins */
 }
+
 
 header .download-link {
     color: lightgreen;
     text-decoration: none;
 }
 
-/* Phone Section */
-.phone-section img {
-    max-width: 300px;
-    margin: 20px 0;
+/* Video Section */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
 }
 
-/* Travel Guide Section */
-.travel-guide {
-    padding: 20px;
+.video-container {
+    max-width: 360px; /* Adjust to match the phone's width */
+    height: 700px; /* Adjust to match the phone's height */
+    border: 10px solid black; /* Optional to mimic phone borders */
+    border-radius: 20px; /* Rounded edges to resemble a phone */
+    overflow: hidden; /* Ensures video stays inside the container */
+    background-color: black; /* Matches the phone frame */
 }
 
-.travel-guide h2 {
-    font-size: 1.5rem;
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the container */
+    display: block;
 }
 
-.travel-guide p {
-    font-size: 1rem;
+
+/* Supporting Text Section */
+.supporting-text {
+    padding: 40px 20px;
+}
+
+.supporting-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.supporting-text p {
+    font-size: 1.2rem;
     color: lightgray;
+    margin-bottom: 20px;
 }
 
-.travel-guide img {
-    max-width: 500px;
-    margin: 20px 0;
+.supporting-text img {
+    max-width: 90%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
 }
 
 /* Coming Soon Section */
 .coming-soon {
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-.coming-soon .icon-phone {
-    font-size: 3rem;
+.coming-soon .phone-icon {
+    max-width: 50px;
+    margin: 20px auto;
     display: block;
-    margin: 20px 0;
 }
 
 .coming-soon h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
 .coming-soon .download-link {
@@ -68,9 +99,14 @@ header .download-link {
 }
 
 /* Footer Section */
+/* Footer Section */
 footer {
-    padding: 10px;
-    font-size: 0.8rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem; /* Adjusted font size */
     color: gray;
+    font-weight: normal; /* Ensure the text isn't bold */
+    text-align: right; /* Align the text to the right */
 }
- 
+
